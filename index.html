@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Cleaning Services</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Cleaning Services</h1>
+        <p>We offer professional cleaning, house wiring, and more!</p>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <section class="services">
+                <h2>Our Services</h2>
+                <ul>
+                    <li><a href="#" onclick="showDetails('cleaning')">Home & Office Cleaning</a></li>
+                    <li><a href="#" onclick="showDetails('wiring')">House Wiring & Electrical Maintenance</a></li>
+                    <li><a href="#" onclick="showDetails('carpet')">Carpet & Upholstery Cleaning</a></li>
+                    <li><a href="#" onclick="showDetails('deep')">Deep Cleaning Services</a></li>
+                </ul>
+            </section>
+
+            <section id="details" class="details">
+                <h2>Service Details</h2>
+                <p id="service-info">Click a service to see details.</p>
+            </section>
+
+            <section class="contact">
+                <h2>Contact Us</h2>
+                <p>Email: <a href="mailto:Jackymashimbhy@gmail.com">info@cleaningservice.com</a></p>
+                <p>Phone: <a href="tel:+27 (81) 0020325">+27 810 00325</a></p>
+                <button onclick="openBookingForm()">Book an Appointment</button>
+            </section>
+        </div>
+
+        <!-- Side Panel Appointment Form -->
+        <div id="booking-form" class="booking-form">
+            <h2>Appointment Booking</h2>
+            <form id="AppointmentForm" action="https://formsubmit.co/jackymashimbhy@gmail.com" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="service">Select Service:</label>
+                    <select name="service" id="service">
+                        <option value="cleaning">Home & Office Cleaning</option>
+                        <option value="wiring">House Wiring & Electrical Maintenance</option>
+                        <option value="carpet">Carpet & Upholstery Cleaning</option>
+                        <option value="deep">Deep Cleaning Services</option>
+                    </select>
+                </div>
+            
+                <button type="submit">Confirm Appointment</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cleaning Services. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showDetails(service) {
+            let info = {
+                "cleaning": "We offer top-tier home and office cleaning services using eco-friendly products.",
+                "wiring": "Our certified electricians provide safe and efficient house wiring and electrical maintenance.",
+                "carpet": "Expert carpet and upholstery cleaning to remove tough stains and dirt.",
+                "deep": "Thorough deep cleaning for homes, offices, and commercial spaces."
+            };
+
+            let detailsElement = document.getElementById("service-info");
+            let detailsSection = document.getElementById("details");
+
+            if (detailsElement && detailsSection) {
+                detailsElement.textContent = info[service];
+                detailsSection.classList.add("show"); // Makes details visible
+            } else {
+                console.error("Element not found.");
+            }
+        }
+
+        function openBookingForm() {
+    let form = document.getElementById("booking-form");
+    if (form) {
+        form.classList.toggle("show"); // Makes form slide in/out
+    } else {
+        console.error("Booking form not found.");
+    }
+}
+
+    </script>
+</body>
+</html>
