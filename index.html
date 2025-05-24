@@ -23,18 +23,32 @@
                     <li><a href="#" onclick="showDetails('deep')">Deep Cleaning Services</a></li>
                 </ul>
             </section>
+            
 
-            <section id="details" class="details">
-                <h2>Service Details</h2>
-                <p id="service-info">Click a service to see details.</p>
+            <section class="slideshow">
+                <img id="slideshow-image" src="C:\Users\sisha\OneDrive\Desktop\Proposals\Appointment site\images">
             </section>
+            
+            <section id="details-container">
+                <p id="dev-message" class="dev-message">⚠️ This site is still under development. Changes may be made anytime | Dev @ ThePrince Techs.</p>
+            
+                <div id="details" class="hidden">
+                    <h2>Service Details</h2>
+                    <p id="service-info">Click a service to see details.</p>
+                    <img id="service-image" class="hidden" src="" alt="Service Image">
+                </div>
+            </section>
+            
 
             <section class="contact">
                 <h2>Contact Us</h2>
-                <p>Email: <a href="mailto:Jackymashimbhy@gmail.com">info@cleaningservice.com</a></p>
-                <p>Phone: <a href="tel:+27 (81) 0020325">+27 810 00325</a></p>
+                <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:jackymashimbhy@gmail.com">info@cleaningservice.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> Phone: <a href="tel:+27 (81) 0020325">+27 810 00325</a></p>
+                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/27810020325" target="_blank">Chat on WhatsApp</a></p>
+            
                 <button onclick="openBookingForm()">Book an Appointment</button>
             </section>
+
         </div>
 
         <!-- Side Panel Appointment Form -->
@@ -71,25 +85,30 @@
         <p>&copy; 2025 Cleaning Services. All Rights Reserved.</p>
     </footer>
 
+
     <script>
-        function showDetails(service) {
-            let info = {
-                "cleaning": "We offer top-tier home and office cleaning services using eco-friendly products.",
-                "wiring": "Our certified electricians provide safe and efficient house wiring and electrical maintenance.",
-                "carpet": "Expert carpet and upholstery cleaning to remove tough stains and dirt.",
-                "deep": "Thorough deep cleaning for homes, offices, and commercial spaces."
-            };
+       function showDetails(service) {
+    let info = {
+        "cleaning": "We offer top-tier home and office cleaning services using eco-friendly products.",
+        "wiring": "Our certified electricians provide safe and efficient house wiring and electrical maintenance.",
+        "carpet": "Expert carpet and upholstery cleaning to remove tough stains and dirt.",
+        "deep": "Thorough deep cleaning for homes, offices, and commercial spaces."
+    };
 
-            let detailsElement = document.getElementById("service-info");
-            let detailsSection = document.getElementById("details");
+    let detailsElement = document.getElementById("service-info");
+    let detailsSection = document.getElementById("details");
+    let devMessage = document.getElementById("dev-message");
 
-            if (detailsElement && detailsSection) {
-                detailsElement.textContent = info[service];
-                detailsSection.classList.add("show"); // Makes details visible
-            } else {
-                console.error("Element not found.");
-            }
+    if (detailsElement && detailsSection) {
+        detailsElement.textContent = info[service];
+
+        detailsSection.style.display = "block"; // Reveals details
+
+        if (devMessage) {
+            devMessage.style.display = "none"; // Hides the development message
         }
+    }
+}
 
         function openBookingForm() {
     let form = document.getElementById("booking-form");
@@ -99,6 +118,18 @@
         console.error("Booking form not found.");
     }
 }
+
+let images = ["images/Image1.jpg", "images/Image3.jpg", "images/Image4.jpg"];
+let currentImageIndex = 0;
+
+function changeImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    document.getElementById("slideshow-image").src = images[currentImageIndex];
+}
+
+// Change image every 3 seconds
+setInterval(changeImage, 3000);
+
 
     </script>
 </body>
