@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,12 +7,14 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header */
 header {
     background-color: #008080;
     color: white;
     padding: 20px;
 }
 
+/* Services & Contact Sections */
 .services, .contact {
     background-color: white;
     padding: 15px;
@@ -19,6 +22,7 @@ header {
     border-radius: 8px;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -28,32 +32,36 @@ footer {
     width: 100%;
 }
 
+/* Service Details */
 .details {
-    display: block; /* Ensures it's always visible */
+    display: none; /* Initially hidden */
     padding: 15px;
     background-color: white;
     margin: 10px auto;
     border-radius: 8px;
     width: 50%;
     text-align: left;
-    opacity: 0; /* Starts hidden */
+    opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
 .details.show {
-    opacity: 1; /* Reveals content when clicked */
+    display: block; /* Reveals details */
+    opacity: 1;
 }
 
+/* Service Links */
 .services a {
     text-decoration: none;
     color: #008080;
     font-weight: bold;
 }
+
 .services a:hover {
     color: #005555;
 }
 
-
+/* Contact & Booking Form */
 .contact, .booking-form {
     background-color: rgb(255, 255, 255);
     padding: 15px;
@@ -63,9 +71,10 @@ footer {
     text-align: left;
 }
 
+/* Booking Form (Slide-In Effect) */
 .booking-form {
     position: fixed;
-    right: -300px; /* Initially hidden off-screen */
+    right: -300px; /* Initially hidden */
     top: 20%;
     width: 250px;
     background-color: white;
@@ -78,7 +87,7 @@ footer {
     right: 20px; /* Moves into view */
 }
 
-
+/* Form Elements */
 .form-group {
     margin-bottom: 10px;
 }
@@ -96,6 +105,7 @@ input, select {
     border-radius: 5px;
 }
 
+/* Buttons */
 button {
     background-color: #008080;
     color: white;
@@ -110,6 +120,7 @@ button:hover {
     background-color: #005555;
 }
 
+/* Slideshow */
 .slideshow {
     width: 100%;
     text-align: center;
@@ -121,20 +132,65 @@ button:hover {
     border-radius: 10px;
 }
 
+/* Development Message */
 .dev-message {
-    font-size: 16px; /* Makes the text smaller */
-    padding: 5px; /* Reduces padding */
+    font-size: 12px;
+    padding: 4px;
     text-align: center;
     background-color: rgb(255, 174, 0);
     border-radius: 10px;
     margin-bottom: 5px;
-    max-width: 40%; /* Keeps it compact */
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
 }
 
-
+/* Hide Initially */
 .hidden {
-    display: none; /* Keeps details invisible initially */
+    display: none; /* Keeps elements invisible initially */
+}
+
+/* Responsive Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .services ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slideshow img {
+        width: 100%; /* Make images fit mobile screens */
+        height: auto;
+    }
+
+    .dev-message {
+        font-size: 10px;
+        padding: 4px;
+        max-width: 90%;
+    }
+
+    #details {
+        width: 90%;
+        text-align: center;
+    }
+
+    .contact, .booking-form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
 }
