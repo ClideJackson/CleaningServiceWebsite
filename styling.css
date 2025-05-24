@@ -55,7 +55,7 @@ footer {
 
 
 .contact, .booking-form {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 15px;
     margin: 5px auto;
     border-radius: 8px;
@@ -108,4 +108,33 @@ button {
 
 button:hover {
     background-color: #005555;
+}
+
+.slideshow {
+    width: 100%;
+    text-align: center;
+}
+
+.slideshow img {
+    width: 150px; /* Smaller width */
+    height: 100px; /* Smaller height */
+    border-radius: 10px;
+}
+
+.dev-message {
+    font-size: 16px; /* Makes the text smaller */
+    padding: 5px; /* Reduces padding */
+    text-align: center;
+    background-color: rgb(255, 174, 0);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    max-width: 40%; /* Keeps it compact */
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+
+.hidden {
+    display: none; /* Keeps details invisible initially */
 }
