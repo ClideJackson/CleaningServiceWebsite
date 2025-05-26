@@ -26,7 +26,7 @@
             
 
             <section class="slideshow">
-                <img id="slideshow-image" src="C:\Users\sisha\OneDrive\Desktop\Proposals\Appointment site\images">
+                  <img id="slideshow-image" src="Image1.jpg" alt="Slideshow image">
             </section>
             
             <section id="details-container">
@@ -103,10 +103,10 @@
     if (detailsElement && detailsSection) {
         detailsElement.textContent = info[service];
 
-        detailsSection.style.display = "block"; // Reveals details
+        detailsSection.style.display = "block";
 
         if (devMessage) {
-            devMessage.style.display = "none"; // Hides the development message
+            devMessage.style.display = "none";
         }
     }
 }
@@ -121,7 +121,7 @@
     }
 }
 
-let images = ["images/Image1.jpg", "images/Image3.jpg", "images/Image4.jpg"];
+let images = ["Image1.jpg", "Image3.jpg", "Image4.jpg"];
 let currentImageIndex = 0;
 
 function changeImage() {
@@ -129,12 +129,10 @@ function changeImage() {
     document.getElementById("slideshow-image").src = images[currentImageIndex];
 }
 
-// Change image every 3 seconds
 setInterval(changeImage, 3000);
 
-
     </script>
-
+    
     <script>
 document.getElementById("AppointmentForm").addEventListener("submit", function(event) {
     const serviceSelect = document.getElementById("service");
