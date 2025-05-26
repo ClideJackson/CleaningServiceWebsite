@@ -99,6 +99,7 @@
     let detailsElement = document.getElementById("service-info");
     let detailsSection = document.getElementById("details");
     let devMessage = document.getElementById("dev-message");
+    let slideshow = document.querySelector(".slideshow");
 
     if (detailsElement && detailsSection) {
         detailsElement.textContent = info[service];
@@ -107,6 +108,10 @@
 
         if (devMessage) {
             devMessage.style.display = "none";
+        }
+
+        if (slideshow) {
+            slideshow.style.display = "none"
         }
     }
 }
