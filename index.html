@@ -67,7 +67,8 @@
             
                 <div class="form-group">
                     <label for="service">Select Service:</label>
-                    <select name="service" id="service">
+                    <select name="service" id="service" required>
+                        <option value="cleaning">Select Service</option>
                         <option value="cleaning">Home & Office Cleaning</option>
                         <option value="wiring">House Wiring & Electrical Maintenance</option>
                         <option value="carpet">Carpet & Upholstery Cleaning</option>
@@ -133,5 +134,16 @@ setInterval(changeImage, 3000);
 
 
     </script>
+
+    <script>
+document.getElementById("AppointmentForm").addEventListener("submit", function(event) {
+    const serviceSelect = document.getElementById("service");
+    if (!serviceSelect.value) {
+        alert("Please select a service.");
+        event.preventDefault(); 
+    }
+});
+</script>
+
 </body>
 </html>
