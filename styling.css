@@ -24,6 +24,8 @@ header {
     padding: 15px;
     margin: 10px auto;
     border-radius: 8px;
+    width: 50%;
+    text-align: center;
 }
 
 /* Footer */
@@ -65,17 +67,6 @@ footer {
     color: #005555;
 }
 
-/* Contact & Booking Form */
-.contact,
-.booking-form {
-    background-color: white;
-    padding: 15px;
-    margin: 5px auto;
-    border-radius: 8px;
-    width: 50%;
-    text-align: left;
-}
-
 /* Booking Form (Slide-In Effect) */
 .booking-form {
     position: fixed;
@@ -87,13 +78,13 @@ footer {
     border-radius: 8px;
     transition: right 0.5s ease-in-out;
     z-index: 999;
+    text-align: left;
 }
 
 .booking-form.show {
     right: 20px;
 }
 
-/* Form Elements */
 .form-group {
     margin-bottom: 10px;
 }
@@ -185,6 +176,7 @@ button:hover {
     .booking-form {
         width: 90%;
         text-align: center;
+        margin: 10px auto;
     }
 
     .booking-form.show {
