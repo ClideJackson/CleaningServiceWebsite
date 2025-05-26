@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    padding-bottom: 60px; /* Prevents footer from overlapping content */
     text-align: center;
     background-color: #f4f4f4;
     overflow-y: auto;
@@ -182,6 +183,10 @@ button:hover {
     .booking-form {
         width: 90%;
         text-align: center;
+    }
+
+    .booking-form.show {
+        right: 10px; /* Fixes slight left shift on mobile */
     }
 }
 
