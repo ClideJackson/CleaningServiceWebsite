@@ -17,7 +17,8 @@ header {
 
 .services,
 .contact {
-    background-color: white;
+    background-color: #008080;
+    color: white;
     padding: 15px;
     margin: 10px auto;
     border-radius: 8px;
