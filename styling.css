@@ -85,8 +85,11 @@ footer {
 }
 
 .booking-form.show {
-    right: 20px; /* Moves into view */
+ 
+    right: 20px;
+    display: block;
 }
+
 
 /* Form Elements */
 .form-group {
@@ -183,6 +186,7 @@ button:hover {
 
     .contact, .booking-form {
         width: 90%;
+    
     }
 }
 
