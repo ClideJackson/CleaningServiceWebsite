@@ -1,12 +1,13 @@
 /* Global Styles */
-body {
+html, body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    padding-bottom: 60px; /* Prevents footer from overlapping content */
     text-align: center;
     background-color: #f4f4f4;
-    overflow-y: auto;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto; /* Allows scrolling */
 }
 
 /* Header */
@@ -30,7 +31,7 @@ footer {
     background-color: #333;
     color: white;
     padding: 10px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -85,6 +86,7 @@ footer {
     padding: 20px;
     border-radius: 8px;
     transition: right 0.5s ease-in-out;
+    z-index: 999;
 }
 
 .booking-form.show {
@@ -186,7 +188,7 @@ button:hover {
     }
 
     .booking-form.show {
-        right: 10px; /* Fixes slight left shift on mobile */
+        right: 10px;
     }
 }
 
