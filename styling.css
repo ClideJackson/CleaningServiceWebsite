@@ -54,7 +54,7 @@ footer {
 
 .services a {
     text-decoration: none;
-    color: #008080;
+    color: white;
     font-weight: bold;
 }
 
@@ -98,8 +98,8 @@ select {
 }
 
 button {
-    background-color: #008080;
-    color: white;
+    background-color: white;
+    color: #008080;
     padding: 10px;
     border: none;
     cursor: pointer;
