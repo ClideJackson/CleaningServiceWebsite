@@ -10,6 +10,14 @@
     <header>
         <h1>MDEEM ENGINEERING & CLEANING SERVICES</h1>
         <p>We offer professional cleaning, house wiring, and more!</p>
+        <nav class="navbar">
+            <div class="burger" onclick="toggleMenu()">☰</div>
+            <ul id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="container">
@@ -121,6 +129,11 @@
     }
 }
 
+function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("show");
+}
+        
 let images = ["Image1.jpg", "Image3.jpg", "Image4.jpg"];
 let currentImageIndex = 0;
 
