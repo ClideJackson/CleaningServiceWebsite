@@ -89,72 +89,68 @@
         <p>&copy; 2025 Cleaning Services. All Rights Reserved.</p>
     </footer>
 
-
     <script>
        function showDetails(service) {
-    let info = {
-        "cleaning": "We offer top-tier home and office cleaning services using eco-friendly products.",
-        "wiring": "Our certified electricians provide safe and efficient house wiring and electrical maintenance.",
-        "carpet": "Expert carpet and upholstery cleaning to remove tough stains and dirt.",
-        "deep": "Thorough deep cleaning for homes, offices, and commercial spaces."
-    };
+            let info = {
+                "cleaning": "We offer top-tier home and office cleaning services using eco-friendly products.",
+                "wiring": "Our certified electricians provide safe and efficient house wiring and electrical maintenance.",
+                "carpet": "Expert carpet and upholstery cleaning to remove tough stains and dirt.",
+                "deep": "Thorough deep cleaning for homes, offices, and commercial spaces."
+            };
 
-    let detailsElement = document.getElementById("service-info");
-    let detailsSection = document.getElementById("details");
-    let devMessage = document.getElementById("dev-message");
-    let slideshow = document.querySelector(".slideshow");
+            let detailsElement = document.getElementById("service-info");
+            let detailsSection = document.getElementById("details");
+            let devMessage = document.getElementById("dev-message");
+            let slideshow = document.querySelector(".slideshow");
 
-    if (detailsElement && detailsSection) {
-        detailsElement.textContent = info[service];
+            if (detailsElement && detailsSection) {
+                detailsElement.textContent = info[service];
 
-        detailsSection.style.display = "block";
+                detailsSection.style.display = "block";
 
-        if (devMessage) {
-            devMessage.style.display = "none";
+                if (devMessage) {
+                    devMessage.style.display = "none";
+                }
+
+                if (slideshow) {
+                    slideshow.style.display = "none";
+                }
+            }
         }
 
-        if (slideshow) {
-            slideshow.style.display = "none"
+        function openBookingForm() {
+            let form = document.getElementById("booking-form");
+            if (form) {
+                form.classList.toggle("show");
+            } else {
+                form.classList.add("show");
+            }
         }
-    }
-}
 
-      function openBookingForm() {
-    let form = document.getElementById("booking-form");
-    if (form) {
-        form.classList.toggle("show");
-        
-    } else {
-        form.classList.add("show");
-    }
-}
+        function toggleMenu() {
+            const navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("show");
+        }
 
-function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("show");
-}
-        
-let images = ["Image1.jpg", "Image3.jpg", "Image4.jpg"];
-let currentImageIndex = 0;
+        let images = ["Image1.jpg", "Image3.jpg", "Image4.jpg"];
+        let currentImageIndex = 0;
 
-//function changeImage() {
-//    currentImageIndex = (currentImageIndex + 1) % images.length;
- //   document.getElementById("slideshow-image").src = images[currentImageIndex];
-//}
+        // function changeImage() {
+        //     currentImageIndex = (currentImageIndex + 1) % images.length;
+        //     document.getElementById("slideshow-image").src = images[currentImageIndex];
+        // }
 
-setInterval(changeImage, 3000);
-
+        setInterval(changeImage, 3000);
     </script>
-    
-    <script>
-document.getElementById("AppointmentForm").addEventListener("submit", function(event) {
-    const serviceSelect = document.getElementById("service");
-    if (!serviceSelect.value) {
-        alert("Please select a service.");
-        event.preventDefault(); 
-    }
-});
-</script>
 
+    <script>
+        document.getElementById("AppointmentForm").addEventListener("submit", function(event) {
+            const serviceSelect = document.getElementById("service");
+            if (!serviceSelect.value) {
+                alert("Please select a service.");
+                event.preventDefault(); 
+            }
+        });
+    </script>
 </body>
 </html>
