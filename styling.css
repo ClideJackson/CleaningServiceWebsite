@@ -1,4 +1,3 @@
-/* Global Styles */
 html, body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,17 +6,15 @@ html, body {
     background-color: #f4f4f4;
     height: 100%;
     overflow-x: hidden;
-    overflow-y: auto; /* Allows scrolling */
+    overflow-y: auto;
 }
 
-/* Header */
 header {
     background-color: #008080;
     color: white;
     padding: 20px;
 }
 
-/* Services & Contact Sections */
 .services,
 .contact {
     background-color: white;
@@ -28,7 +25,6 @@ header {
     text-align: center;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -38,7 +34,6 @@ footer {
     width: 100%;
 }
 
-/* Service Details */
 .details {
     display: none;
     padding: 15px;
@@ -56,7 +51,6 @@ footer {
     opacity: 1;
 }
 
-/* Service Links */
 .services a {
     text-decoration: none;
     color: #008080;
@@ -67,7 +61,6 @@ footer {
     color: #005555;
 }
 
-/* Booking Form (Slide-In Effect) */
 .booking-form {
     position: fixed;
     right: -400px;
@@ -103,7 +96,6 @@ select {
     border-radius: 5px;
 }
 
-/* Buttons */
 button {
     background-color: #008080;
     color: white;
@@ -118,7 +110,6 @@ button:hover {
     background-color: #005555;
 }
 
-/* Slideshow */
 .slideshow {
     width: 100%;
     text-align: center;
@@ -130,7 +121,6 @@ button:hover {
     border-radius: 10px;
 }
 
-/* Development Message */
 .dev-message {
     font-size: 12px;
     padding: 4px;
@@ -142,12 +132,10 @@ button:hover {
     font-weight: bold;
 }
 
-/* Hide Initially */
 .hidden {
     display: none;
 }
 
-/* Responsive Mobile Adjustments */
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -193,3 +181,58 @@ button:hover {
         font-size: 14px;
     }
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar .burger {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
