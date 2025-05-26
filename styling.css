@@ -18,7 +18,7 @@ header {
 .services,
 .contact {
     background-color: #008080;
-    color: black;
+    color: white;
     padding: 15px;
     margin: 10px auto;
     border-radius: 8px;
@@ -54,7 +54,7 @@ footer {
 
 .services a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 
@@ -98,8 +98,8 @@ select {
 }
 
 button {
-    background-color: white;
-    color: #008080;
+    background-color: black;
+    color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
